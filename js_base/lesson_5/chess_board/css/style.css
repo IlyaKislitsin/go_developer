@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh;
+}
+#page-content {
+    padding: 80px;
+}
+
+.chess-board {
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    background: antiquewhite;
+    grid-template-areas:
+            "empty-top-left top-letters empty-top-right"
+            "left-numbers game-field right-numbers"
+            "empty-bottom-left bottom-letters empty-bottom-right";
+}
+
+.chess-board_cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.letters-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.numbers-container {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.game-fields-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 1px solid black;
+}
+
+.chess-board_cell__black {
+    background: black;
+}
+
+.chess-board_cell__white {
+    background: white;
+}
